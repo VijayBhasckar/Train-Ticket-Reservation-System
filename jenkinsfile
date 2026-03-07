@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
 
     environment {
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               git branch: https://github.com/VijayBhasckar/Train-Ticket-Reservation-System.git
+               git branch: 'master', url: 'https://github.com/VijayBhasckar/Train-Ticket-Reservation-System.git'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
                 sh '''
                     docker stop restaurant || true
                     docker rm restaurant || true
-                    docker run -d -p 4444:8080 --name restaurant ${IMAGE_NAME}:latest
+                    docker run -d -p 4040:8080 --name train-ticket ${IMAGE_NAME}:latest
                 '''
             }
         }
