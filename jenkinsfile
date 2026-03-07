@@ -40,8 +40,8 @@
         stage('Run Container') {
             steps {
                 sh '''
-                    docker stop restaurant || true
-                    docker rm restaurant || true
+                    docker stop train-ticket || true
+                    docker rm train-ticket || true
                     docker run -d -p 4040:8080 --name train-ticket ${IMAGE_NAME}:latest
                 '''
             }
