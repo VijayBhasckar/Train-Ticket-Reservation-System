@@ -3,7 +3,7 @@
 
     environment {
         DOCKERHUB_CREDENTIALS = 'docker-cred' // Replace with your Jenkins DockerHub credentials ID
-        IMAGE_NAME = 'timvijaybhaskar/train-ticket-booking'
+        IMAGE_NAME = 'imvijaybhaskar/train-ticket-booking'
     }
 
     stages {
