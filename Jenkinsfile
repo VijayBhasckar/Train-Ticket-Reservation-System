@@ -42,7 +42,7 @@ pipeline {
                 sh '''
                     docker stop trainticket || true
                     docker rm trainticket|| true
-                    docker run -d -p 7878:8080 --name trainticket ${IMAGE_NAME}:latest
+                    docker run -d -p 7979:8080 --name trainticket ${IMAGE_NAME}:latest
                 '''
             }
         }
