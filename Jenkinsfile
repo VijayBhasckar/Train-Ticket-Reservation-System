@@ -40,9 +40,9 @@ pipeline {
         stage('Run Container') {
             steps {
                 sh '''
-                    docker stop restaurant || true
-                    docker rm restaurant || true
-                    docker run -d -p 4444:8080 --name restaurant ${IMAGE_NAME}:latest
+                    docker stop trainticket || true
+                    docker rm trainticket|| true
+                    docker run -d -p 7878:8080 --name trainticket ${IMAGE_NAME}:latest
                 '''
             }
         }
